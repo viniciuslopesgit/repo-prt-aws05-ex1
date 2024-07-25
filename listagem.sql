@@ -1,2 +1,2 @@
-SELECT pessoa_pk, nome, apelido, saldo, data_nasc, country, nif
-	FROM public.tbl_pessoa;
+SELECT aluno_id, nome, curso, proprina
+	FROM public.t_aluno;
