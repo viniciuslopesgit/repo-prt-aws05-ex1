@@ -41,3 +41,4 @@ jobs:
           ls -all
           cat chave.pem
           PGPASSWORD=${{ secrets.PG_PASS }} psql -d db-dl -h ${{ vars.DB_HOST }} -U postgres -f listagem.sql 
+          
