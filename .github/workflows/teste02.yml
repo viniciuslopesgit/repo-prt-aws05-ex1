@@ -35,9 +35,9 @@ jobs:
         run: |
           sudo apt -y update
           sudo apt install -y postgresql-client
-          echo ${{ secrets.PGPASS }} > chave.pem
+          echo ${{ secrets.PG_PASS }} > chave.pem
           echo ${{ vars.DB_HOST }}
           chmod 600 chave.pem
           ls -all
           cat chave.pem
-          PGPASSWORD=${{ secrets.PGPASS }} psql -d db-dl -h ${{ vars.DB_HOST }} -U postgres -f listagem.sql 
+          PGPASSWORD=${{ secrets.PG_PASS }} psql -d db-dl -h ${{ vars.DB_HOST }} -U postgres -f listagem.sql 
